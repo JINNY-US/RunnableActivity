@@ -64,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             int i = 0 ;
-            for(i=0;i<20 && running;i++){
+            for(i = 0 ; i < 20 && running ; i++){
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                Log.v(TAG1,"Thread times="+i);
+                Log.v(TAG1,"Thread times= " + i);
             }
         }
     }
