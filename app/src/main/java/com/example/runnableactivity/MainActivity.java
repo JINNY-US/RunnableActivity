@@ -6,11 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    Thread wr;
+    Thread wr, wr2;
     boolean running = true;
-    String TAG2 = "THREAD";
-    String TAG1 = "THREAD";
-    Thread w;
+    String TAG1, TAG2 = "THREAD";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        w = new WorkerThread();
+        wr2 = new WorkerThread();
         running = true;
 
-        w.start();
+        wr2.start();
         Log.v(TAG1,"Now I am in onStart");
         wr = new Thread(new Runnable() {
             @Override
